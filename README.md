@@ -1,41 +1,101 @@
-# Customer Lifetime Value Prediction on Online Retail Dataset
+# Customer Lifetime Value Prediction using K-Means Clustering on Online Retail Dataset
 
-This project is about predicting customer lifetime value (CLV) for an online retail dataset. CLV is a measure of the total worth of a customer to a business over the entirety of their relationship. In this project, we will use machine learning algorithms to predict the CLV of customers using the online retail dataset available on Kaggle.
+This project aims to predict the Customer Lifetime Value (CLTV) using K-Means Clustering on the Online Retail Dataset available on Kaggle.
+
+
+## Project Overview
+
+CLTV is a metric that helps companies determine the total amount of money a customer is expected to spend on their products or services throughout their lifetime. This project will use K-Means clustering algorithm to segment customers based on their buying behaviour and predict the CLTV of each segment.
 
 
 ## Dataset
 
-The dataset used in this project is the Online Retail dataset available on Kaggle[ here](https://www.kaggle.com/vijayuv/onlineretail). The dataset contains 541,909 rows and 8 columns of transactional data from an online retailer that sells gift items. The data includes the following variables:
+The Online Retail Dataset contains 541,909 transactions made by customers of an online retail store based in the UK from 2009 to 2011. The dataset has the following attributes:
 
 
 
-* InvoiceNo: Unique identifier for the transaction.
-* StockCode: Unique identifier for each item sold.
-* Description: Description of the item.
-* Quantity: Quantity of each item sold in the transaction.
-* InvoiceDate: Date and time of the transaction.
-* UnitPrice: Price per unit of each item.
-* CustomerID: Unique identifier for each customer.
-* Country: Country where the transaction took place.
+* InvoiceNo: Unique identifier of each transaction
+* StockCode: Unique identifier of each product
+* Description: Description of each product
+* Quantity: Number of products purchased in each transaction
+* InvoiceDate: Date and time of each transaction
+* UnitPrice: Price of each product
+* CustomerID: Unique identifier of each customer
+* Country: Country of each customer
+
+The dataset can be downloaded from[ Kaggle](https://www.kaggle.com/carrie1/ecommerce-data).
 
 
-## Methodology
+## Requirements
 
-The methodology used in this project is as follows:
-
-
-
-1. Data Cleaning and Preprocessing: The dataset was cleaned and preprocessed to handle missing values, outliers, and other data quality issues.
-2. Feature Engineering: New features were created from the existing variables to capture additional information about the customers, such as recency, frequency, and monetary value.
-3. Modeling: Several machine learning algorithms were used to predict the CLV of customers, including linear regression, decision tree regression, and random forest regression. The best model was selected based on its performance on the test dataset.
-4. Model Evaluation: The performance of the selected model was evaluated using metrics such as root mean squared error (RMSE), mean absolute error (MAE), and R-squared.
+The project is implemented in Python 3.x using the following libraries:
 
 
-## Results
 
-The best performing model was the Random Forest Regression model, which achieved an RMSE of 306.25 and an R-squared value of 0.83 on the test dataset. This model was able to predict the CLV of customers with a reasonable degree of accuracy.
+* pandas
+* numpy
+* scikit-learn
+* seaborn
+* matplotlib
+
+To install the required libraries, run the following command:
+
+bash
+
+Copy code
+
+pip install pandas numpy scikit-learn seaborn matplotlib
 
 
-## Conclusion
+## Project Structure
 
-In this project, we used machine learning algorithms to predict the CLV of customers using the online retail dataset. We found that the Random Forest Regression model was the best performing model, achieving an RMSE of 306.25 and an R-squared value of 0.83 on the test dataset. These results suggest that machine learning can be used to accurately predict the CLV of customers in an online retail setting.
+The project has the following structure:
+
+├── data
+
+│   ├── Online_Retail.csv
+
+│   └── Online_Retail.zip
+
+├── notebooks
+
+│   ├── data_exploration.ipynb
+
+│   ├── data_preprocessing.ipynb
+
+│   └── cltv_prediction.ipynb
+
+├── src
+
+│   └── cltv.py
+
+├── README.md
+
+└── requirements.txt
+
+
+
+* data: Contains the Online Retail dataset in CSV and ZIP format.
+* notebooks: Contains the Jupyter notebooks used in the project.
+    * data_exploration.ipynb explores the dataset and visualises the data distribution.
+    * data_preprocessing.ipynb preprocesses the dataset for modeling.
+    * cltv_prediction.ipynb implements K-Means clustering and predicts the CLTV of each customer segment.
+* src: Contains the Python script for CLTV prediction.
+* README.md: This file.
+* requirements.txt: Contains the list of required libraries.
+
+
+## Usage
+
+To run the project, follow these steps:
+
+
+
+1. Install the required libraries
+2. Download the Online Retail dataset from[ Kaggle](https://www.kaggle.com/carrie1/ecommerce-data) and place it in the data directory.
+3. Run the cltv_prediction.ipynb notebook to predict the CLTV of each customer segment.
+
+
+## License
+
+This project is licensed under the MIT License - see the LICENCE file for details.
