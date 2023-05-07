@@ -51,30 +51,6 @@ pip install pandas numpy scikit-learn seaborn matplotlib
 
 The project has the following structure:
 
-├── data
-
-│   ├── Online_Retail.csv
-
-│   └── Online_Retail.zip
-
-├── notebooks
-
-│   ├── data_exploration.ipynb
-
-│   ├── data_preprocessing.ipynb
-
-│   └── cltv_prediction.ipynb
-
-├── src
-
-│   └── cltv.py
-
-├── README.md
-
-└── requirements.txt
-
-
-
 * data: Contains the Online Retail dataset in CSV and ZIP format.
 * notebooks: Contains the Jupyter notebooks used in the project.
     * data_exploration.ipynb explores the dataset and visualises the data distribution.
