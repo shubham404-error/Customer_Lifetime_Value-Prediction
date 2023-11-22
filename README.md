@@ -40,11 +40,7 @@ The project is implemented in Python 3.x using the following libraries:
 
 To install the required libraries, run the following command:
 
-bash
-
-Copy code
-
-pip install pandas numpy scikit-learn seaborn matplotlib
+`pip install pandas numpy scikit-learn seaborn matplotlib`
 
 
 ## Project Structure
